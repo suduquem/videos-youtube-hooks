@@ -1,0 +1,10 @@
+.video-item {
+  display: flex !important;
+  align-items: center !important;
+  /* Para mostrarle al usuario que le puede hacer click al video en la lista */
+  cursor: pointer; 
+}
+
+.video-item.item img {
+  max-width: 180px;
+}
