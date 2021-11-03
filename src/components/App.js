@@ -39,11 +39,14 @@ const App = () => {
     búsqueda, se muestre un video por defecto */
   };
 
-  const onVideoSelect = (video) => {
-    console.log('From the App!', video);
-    setSelectedVideo(video);
-    // Como se actualiza el State, se vuelve a renderizar el componente
-  };
+  /* Siempre que se tiene una función de una sola línea de código, es
+  bueno que esa línea se use in-line en donde se deba usar y no crear
+  una función para ella -> se llama in-line function */
+  /*   const onVideoSelect = (video) => {
+        console.log('From the App!', video);
+        setSelectedVideo(video);
+        // Como se actualiza el State, se vuelve a renderizar el componente
+  }; */
 
   return (
     <div className='ui container'>
@@ -57,7 +60,9 @@ const App = () => {
           <div className='five wide column'>
             <VideoList
               videos={videos}
-              onVideoSelect={onVideoSelect}
+              // se pasa el video al que se le dio click:
+              onVideoSelect={setSelectedVideo} // Es equivalente a:
+              // onVideoSelect={(video) => setSelectedVideo(video)}
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-// Este componente solo tiene state, por tanto solo se requiere el useState hook
+/* Este componente solo tiene state, por tanto solo se requiere
+el useState hook */
 
 const SearchBar = ({ onFormSubmitApp }) => {
   const [term, setTerm] = useState('');
@@ -8,7 +9,8 @@ const SearchBar = ({ onFormSubmitApp }) => {
     event.preventDefault();
 
     // calling the callback from parent component
-    /* Se le pasa al componente padre el término de búsqueda, para que lo conozca */
+    /* Se le pasa al componente padre el término de búsqueda,
+    para que lo conozca */
     onFormSubmitApp(term);
   };
 
